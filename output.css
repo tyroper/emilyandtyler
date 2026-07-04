@@ -1,12 +1,22 @@
-/*! tailwindcss-inspired utility stylesheet | pure HTML + CSS */
+@import "./tailwind.css";
+
+/*! Emily & Tyler custom theme and components */
 :root {
 	--primary: #123524;
 	--secondary: #91ab9f;
 	--accent: #540009;
 	--cream: #f8f4e3;
 	--shadow: 0 24px 70px rgba(18, 53, 36, 0.18);
-	--font-cursive: "Parisienne", cursive;;
+	--font-cursive: "Parisienne", cursive;
 	--font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: var(--font-sans);
 }
 
 .font-cursive { font-family: var(--font-cursive); }
@@ -23,41 +33,12 @@
 .text-cream\/85 { color: rgba(248, 244, 227, 0.85); }
 .text-primary\/70 { color: rgba(18, 53, 36, 0.7); }
 .text-primary\/75 { color: rgba(18, 53, 36, 0.75); }
-
-*,
-::before,
-::after {
-	box-sizing: border-box;
-}
-
-html {
-	scroll-behavior: smooth;
-}
-
-body {
-	margin: 0;
-	font-family: var(--font-sans);
-	line-height: 1.5;
-}
-
-a {
-	color: inherit;
-	text-decoration: none;
-}
-
-svg {
-	display: block;
-	max-width: 100%;
-}
-
-img {
-	display: block;
-	max-width: 100%;
-}
+.text-leading { line-height: 1.1; }
+.text-balanced { text-wrap: balance; }
 
 .section {
-	padding-top: clamp(4.5rem, 9vw, 7rem);
 	padding-bottom: clamp(4.5rem, 9vw, 7rem);
+	padding-top: clamp(4.5rem, 9vw, 7rem);
 }
 
 .nav-link {
@@ -126,24 +107,6 @@ img {
 	position: absolute;
 }
 
-.mountain-wrap {
-	position: relative;
-}
-
-.mountain-wrap::before {
-	background: radial-gradient(circle at 62% 24%, rgba(248, 244, 227, 0.16), transparent 34%);
-	content: "";
-	inset: -18%;
-	position: absolute;
-}
-
-.mountain-graphic {
-	filter: drop-shadow(0 28px 46px rgba(0, 0, 0, 0.22));
-	isolation: isolate;
-	position: relative;
-	width: min(100%, 45rem);
-}
-
 .eyebrow {
 	color: var(--accent);
 	font-size: 0.8rem;
@@ -195,9 +158,7 @@ img {
 	border: 1px solid rgba(18, 53, 36, 0.14);
 	border-radius: 8px;
 	box-shadow: var(--shadow);
-	margin-bottom: 0;
-	margin-left: 0;
-	margin-right: 0;
+	margin: 3rem 0 0;
 	overflow: hidden;
 }
 
@@ -217,16 +178,16 @@ img {
 }
 
 .tab-input {
-	position: absolute;
 	opacity: 0;
 	pointer-events: none;
+	position: absolute;
 }
 
 .tab-list {
 	background: rgba(18, 53, 36, 0.08);
 	display: grid;
-	grid-template-columns: repeat(4, minmax(0, 1fr));
 	gap: 0.35rem;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
 	padding: 0.45rem;
 }
 
@@ -337,7 +298,7 @@ img {
 	border: 1px solid rgba(18, 53, 36, 0.14);
 	border-radius: 8px;
 	box-shadow: var(--shadow);
-  padding: 1rem;
+	padding: 1rem;
 }
 
 .dark-card-title {
@@ -350,33 +311,6 @@ img {
 .dark-card-copy {
 	color: rgba(18, 53, 36, 0.7);
 	margin: 0.8rem 0 0;
-}
-
-@media (min-width: 640px) {
-	.sm\:flex-row { flex-direction: row; }
-	.sm\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-	.sm\:col-span-2 { grid-column: span 2 / span 2; }
-	.sm\:text-xl { font-size: 1.25rem; }
-	.sm\:text-5xl { font-size: clamp(3rem, 7vw, 4rem); }
-	.sm\:text-7xl { font-size: clamp(4.5rem, 11vw, 7rem); }
-}
-
-@media (min-width: 768px) {
-	.md\:flex { display: flex; }
-	.md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-	.md\:grid-cols-\[\.8fr_1\.2fr\] { grid-template-columns: 0.8fr 1.2fr; }
-	.md\:grid-cols-\[1\.05fr_\.95fr\] { grid-template-columns: 1.05fr 0.95fr; }
-	.md\:items-center { align-items: center; }
-	.md\:items-end { align-items: end; }
-	.md\:pb-24 { padding-bottom: 6rem; }
-	.md\:pt-16 { padding-top: 4rem; }
-}
-
-@media (min-width: 1024px) {
-	.lg\:grid-cols-\[\.9fr_1\.1fr\] { grid-template-columns: 0.9fr 1.1fr; }
-	.lg\:grid-cols-\[1fr_1fr\] { grid-template-columns: 1fr 1fr; }
-	.lg\:items-start { align-items: start; }
-	.lg\:text-8xl { font-size: 7.25rem; }
 }
 
 @media (max-width: 639px) {
