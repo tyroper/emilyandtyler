@@ -314,6 +314,14 @@ body {
 }
 
 @media (max-width: 639px) {
+	header section {
+		min-height: 75svh;
+	}
+
+	header h1 {
+		font-size: clamp(3.05rem, 16vw, 3.75rem);
+	}
+
 	.hero-photo {
 		object-position: 58% center;
 	}
@@ -328,5 +336,47 @@ body {
 
 	.btn {
 		width: 100%;
+	}
+}
+
+@media (max-width: 767px) {
+	.section {
+		padding-bottom: 3.5rem;
+		padding-top: 3.5rem;
+	}
+
+	.section > .mx-auto:not(.px-6) {
+		padding-inline: 1.5rem;
+	}
+
+	.section .flex-row {
+		flex-direction: column;
+	}
+
+	.section .flex-row > .flex-1 {
+		flex: none;
+		width: 100%;
+	}
+
+	.section .flex-row.items-center {
+		align-items: flex-start;
+	}
+
+	.schedule-tabs {
+		width: 100%;
+	}
+
+	.tab-button {
+		min-height: 3.65rem;
+		padding: 0.45rem 0.3rem;
+	}
+
+	.tab-button span {
+		font-size: 1rem;
+	}
+
+	footer {
+		letter-spacing: 0.16em;
+		line-height: 1.7;
 	}
 }
