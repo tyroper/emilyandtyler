@@ -5,9 +5,24 @@
 	--accent: #540009;
 	--cream: #f8f4e3;
 	--shadow: 0 24px 70px rgba(18, 53, 36, 0.18);
-	--font-serif: Georgia, "Times New Roman", serif;
+	--font-cursive: "Parisienne", cursive;;
 	--font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
+
+.font-cursive { font-family: var(--font-cursive); }
+.font-sans { font-family: var(--font-sans); }
+.bg-primary { background-color: var(--primary); }
+.bg-accent { background-color: var(--accent); }
+.bg-cream { background-color: var(--cream); }
+.bg-secondary\/25 { background-color: rgba(145, 171, 159, 0.25); }
+.text-primary { color: var(--primary); }
+.text-accent { color: var(--accent); }
+.text-cream { color: var(--cream); }
+.text-secondary { color: var(--secondary); }
+.text-cream\/75 { color: rgba(248, 244, 227, 0.75); }
+.text-cream\/85 { color: rgba(248, 244, 227, 0.85); }
+.text-primary\/70 { color: rgba(18, 53, 36, 0.7); }
+.text-primary\/75 { color: rgba(18, 53, 36, 0.75); }
 
 *,
 ::before,
@@ -39,73 +54,6 @@ img {
 	display: block;
 	max-width: 100%;
 }
-
-.relative { position: relative; }
-.z-10 { z-index: 10; }
-.mx-auto { margin-left: auto; margin-right: auto; }
-.mb-4 { margin-bottom: 1rem; }
-.mt-4 { margin-top: 1rem; }
-.mt-5 { margin-top: 1.25rem; }
-.mt-6 { margin-top: 1.5rem; }
-.mt-9 { margin-top: 2.25rem; }
-.mt-12 { margin-top: 3rem; }
-.hidden { display: none; }
-.flex { display: flex; }
-.flex-col { flex-direction: column; }
-.grid { display: grid; }
-.max-w-lg { max-width: 32rem; }
-.max-w-xl { max-width: 36rem; }
-.max-w-2xl { max-width: 42rem; }
-.max-w-4xl { max-width: 56rem; }
-.max-w-6xl { max-width: 72rem; }
-.items-center { align-items: center; }
-.items-end { align-items: end; }
-.items-start { align-items: start; }
-.justify-between { justify-content: space-between; }
-.gap-3 { gap: 0.75rem; }
-.gap-4 { gap: 1rem; }
-.gap-8 { gap: 2rem; }
-.gap-10 { gap: 2.5rem; }
-.overflow-hidden { overflow: hidden; }
-.bg-primary { background-color: var(--primary); }
-.bg-accent { background-color: var(--accent); }
-.bg-cream { background-color: var(--cream); }
-.bg-secondary\/25 { background-color: rgba(145, 171, 159, 0.25); }
-.px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
-.py-5 { padding-top: 1.25rem; padding-bottom: 1.25rem; }
-.py-8 { padding-top: 2rem; padding-bottom: 2rem; }
-.pb-16 { padding-bottom: 4rem; }
-.pt-8 { padding-top: 2rem; }
-.text-center { text-align: center; }
-.font-serif { font-family: var(--font-serif); }
-.font-sans { font-family: var(--font-sans); }
-.text-sm { font-size: 0.875rem; }
-.text-lg { font-size: 1.125rem; }
-.text-xl { font-size: 1.25rem; }
-.text-4xl { font-size: clamp(2.25rem, 6vw, 3rem); }
-.text-6xl { font-size: clamp(3.5rem, 14vw, 6rem); }
-.font-semibold { font-weight: 600; }
-.uppercase { text-transform: uppercase; }
-.leading-none { line-height: 0.95; }
-.leading-tight { line-height: 1.08; }
-.leading-8 { line-height: 2rem; }
-.tracking-wide { letter-spacing: 0.025em; }
-.tracking-widest { letter-spacing: 0.1em; }
-.tracking-\[0\.28em\] { letter-spacing: 0.28em; }
-.tracking-\[0\.35em\] { letter-spacing: 0.35em; }
-.text-primary { color: var(--primary); }
-.text-accent { color: var(--accent); }
-.text-cream { color: var(--cream); }
-.text-secondary { color: var(--secondary); }
-.text-cream\/75 { color: rgba(248, 244, 227, 0.75); }
-.text-cream\/85 { color: rgba(248, 244, 227, 0.85); }
-.text-primary\/70 { color: rgba(18, 53, 36, 0.7); }
-.text-primary\/75 { color: rgba(18, 53, 36, 0.75); }
-.antialiased {
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-.text-balance { text-wrap: balance; }
 
 .section {
 	padding-top: clamp(4.5rem, 9vw, 7rem);
@@ -385,21 +333,22 @@ img {
 }
 
 .dark-card {
-	background: rgba(248, 244, 227, 0.08);
-	border: 1px solid rgba(248, 244, 227, 0.18);
+	background: rgba(248, 244, 227, 0.42);
+	border: 1px solid rgba(18, 53, 36, 0.14);
 	border-radius: 8px;
-	padding: 1.4rem;
+	box-shadow: var(--shadow);
+  padding: 1rem;
 }
 
 .dark-card-title {
-	color: var(--secondary);
+	color: var(--primary);
 	font-family: var(--font-sans);
 	font-size: 1.5rem;
 	margin: 0;
 }
 
 .dark-card-copy {
-	color: rgba(248, 244, 227, 0.72);
+	color: rgba(18, 53, 36, 0.7);
 	margin: 0.8rem 0 0;
 }
 
