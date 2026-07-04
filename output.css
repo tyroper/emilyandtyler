@@ -158,7 +158,6 @@ body {
 	border: 1px solid rgba(18, 53, 36, 0.14);
 	border-radius: 8px;
 	box-shadow: var(--shadow);
-	margin: 3rem 0 0;
 	overflow: hidden;
 }
 
