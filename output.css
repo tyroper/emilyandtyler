@@ -203,6 +203,14 @@ img {
 	text-transform: uppercase;
 }
 
+.eyebrow-cream {
+	color: var(--cream);
+	font-size: 0.8rem;
+	font-weight: 800;
+	letter-spacing: 0.24em;
+	text-transform: uppercase;
+}
+
 .info-card {
 	background: rgba(255, 255, 255, 0.28);
 	border: 1px solid rgba(18, 53, 36, 0.14);
