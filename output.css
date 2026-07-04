@@ -158,7 +158,7 @@ body {
 	border: 1px solid rgba(18, 53, 36, 0.14);
 	border-radius: 8px;
 	box-shadow: var(--shadow);
-	flex: 1 1 0;
+	flex: none;
 	min-width: 0;
 	overflow: hidden;
 	width: 100%;
@@ -329,7 +329,7 @@ body {
 	}
 
 	.feature-photo {
-		aspect-ratio: 1.25 / 1;
+		aspect-ratio: 4 / 5;
 	}
 
 	.timeline-item {
@@ -338,6 +338,12 @@ body {
 
 	.btn {
 		width: 100%;
+	}
+}
+
+@media (min-width: 768px) {
+	.feature-photo {
+		flex: 1 1 0;
 	}
 }
 
