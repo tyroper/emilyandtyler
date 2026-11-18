@@ -30,7 +30,20 @@ Sign-in sets an eight-hour signed, HttpOnly, SameSite=Strict cookie scoped to `/
 
 Deploy to a Node.js host with access to PostgreSQL, configure `DATABASE_URL` (and optionally `DATABASE_CA_CERT`) in its server environment, and run `npm run db:init` once against that database. The database user needs table creation privileges for initialization and SELECT/UPDATE privileges at runtime. No database credentials are sent to the browser.
 
-Set the host's root/working directory to the repository root (`.`). Install with `npm ci`, build with `npm run build`, and start with `npm start`. Next.js generates its production output in the root `.next/` directory and serves assets from the root `public/` directory.
+Set the host's root/working directory to the repository root (`.`). Install with `npm ci`, build with `npm run build`, and start with `npm start`. The build creates `.next/standalone/` and copies `public/` and `.next/static/` into it. The start script launches that standalone server on `0.0.0.0`, using the host's `PORT` environment variable (3000 by default).
+
+For DigitalOcean App Platform, use a **Web Service** with these component settings:
+
+| Setting | Value |
+| --- | --- |
+| Source directory | `/` (repository root) |
+| Build command | `npm run build` |
+| Run command | `npm start` |
+| HTTP port | `8080` |
+
+Keep the build's development dependencies enabled; TypeScript and Tailwind are needed to compile the app. Configure `DATABASE_URL`, `ADMIN_USER`, `ADMIN_PASSWORD`, and optionally `DATABASE_CA_CERT` as runtime environment variables. The standalone server does not need database access or admin credentials during its build.
+
+After changing these settings, rebuild and deploy the latest commit. Confirm the build log ends with `Standalone server and static assets are ready for deployment.` before checking the runtime log. A missing production build error means the build did not run successfully or its output was not retained in the deployed container; `npm start` does not build the app.
 
 ## Checks
 
