@@ -1,4 +1,4 @@
-@import "./tailwind.css?v=20260915-2";
+/* @import "./tailwind.css?v=20260915-2"; */
 
 @font-face {
 	font-family: "Malibu Ring";
@@ -97,6 +97,16 @@ body {
 .btn-primary {
 	background: var(--primary);
 	color: var(--cream);
+}
+
+.hero-content {
+	container-type: inline-size;
+}
+
+.hero-title {
+	/* Scale with the available width between the mobile and desktop sizes. */
+	font-size: clamp(2.5rem, 12cqi, 6rem);
+	white-space: nowrap;
 }
 
 .hero-photo {
@@ -327,10 +337,6 @@ body {
 @media (max-width: 639px) {
 	header section {
 		min-height: 75svh;
-	}
-
-	header h1 {
-		font-size: clamp(3.05rem, 16vw, 3.75rem);
 	}
 
 	.hero-photo {

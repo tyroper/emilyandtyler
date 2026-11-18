@@ -1,0 +1,81 @@
+{
+    "1": {
+        "Day": "Friday",
+        "Date": "Nov 5th",
+        "Events": [
+            {
+                "Time": "Afternoon",
+                "Event": "Arrive in Estes Park",
+                "Description": "Check into hotel and settle in"
+            },
+            {
+                "Time": "Evening",
+                "Event": "Rehearsal Dinner with Wedding Party",
+                "Description": "Rehearsal dinner with the wedding party"
+            }
+        ]
+    },
+    "2": {
+        "Day": "Saturday",
+        "Date": "Nov 6th",
+        "Events": [
+            {
+                "Time": "11:00 AM",
+                "Event": "Welcome Brunch",
+                "Description": "Brunch with family and friends to celebrate those traveling for the wedding"
+            },
+            {
+                "Time": "Afternoon",
+                "Event": "Explore",
+                "Description": "Explore Estes Park and enjoy the surroundings"
+            }
+        ]
+    },
+    "3": {
+        "Day": "Sunday",
+        "Date": "Nov 7th",
+        "Events": [
+            {
+                "Time": "3:30 PM",
+                "Event": "Guests Arrive",
+                "Description": "Guests arrive at the venue, say hello and take in the view"
+            },
+            {
+                "Time": "4:00 PM",
+                "Event": "Wedding Ceremony",
+                "Description": "We say I do at 7522 ft in the best place on Earth"
+            },
+            {
+                "Time": "4:30 PM",
+                "Event": "Cocktail Hour",
+                "Description": "Cocktails and appetizers while the couple takes photos"
+            },
+            {
+                "Time": "5:30 PM",
+                "Event": "Reception",
+                "Description": "Dinner and dancing to celebrate the newlyweds"
+            },
+            {
+                "Time": "11:00 PM",
+                "Event": "Send-off",
+                "Description": "Couple's send-off to conclude the wedding celebration"
+            }
+        ]
+    },
+    "4": {
+        "Day": "Monday",
+        "Date": "Nov 8th",
+        "Events": [
+            {
+                "Time": "Morning",
+                "Event": "Breakfast",
+                "Description": "One last slow morning before everyone heads home"
+            },
+            {
+                "Time": "Late Morning",
+                "Event": "Check-out",
+                "Description": "Guests check out of the hotel and depart Estes Park. Give yourself extra time for travel and enjoy the last moments in Estes Park"
+            }
+        ]
+    }
+}
