@@ -26,7 +26,7 @@ export function FinerDetails({ content }: { content: Pick<WeddingContent, "lodgi
     <section className="section bg-cream" id="finer-details" aria-labelledby="finer-details-heading">
       <div className="mx-auto max-w-6xl px-6">
         <h2 id="finer-details-heading" className="text-center font-sans text-4xl leading-tight sm:text-5xl">
-          The <span className="font-cursive text-accent">finer</span> details
+          The <span className="font-cursive text-accent">finer</span> Details
         </h2>
         <div className="mt-12 grid gap-4 md:grid-cols-2">
           <article className="dark-card">
