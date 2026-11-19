@@ -4,7 +4,7 @@ import { useRef, useState, type KeyboardEvent } from "react";
 import type { ScheduleDay } from "../../lib/content-schema";
 
 export function ScheduleTabs({ scheduleDays }: { scheduleDays: ScheduleDay[] }) {
-  const [activeId, setActiveId] = useState(scheduleDays.find((day) => day.id === "nov-7")?.id ?? scheduleDays[0]?.id);
+  const [activeId, setActiveId] = useState(scheduleDays.find((day) => day.id === "nov-6")?.id ?? scheduleDays[0]?.id);
   const activeIndex = Math.max(0, scheduleDays.findIndex((day) => day.id === activeId));
   const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
 

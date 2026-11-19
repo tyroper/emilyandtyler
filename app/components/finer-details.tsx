@@ -4,7 +4,7 @@ import type { WeddingContent } from "../../lib/content-schema";
 function Recommendations({ content }: { content: WeddingContent["thingsToDo"] }) {
   return (
     <article className="dark-card md:col-span-2">
-      <h3 className="dark-card-title">Things to do</h3>
+      <h3 className="info-label">Things to do</h3>
       {content.introduction && <p className="dark-card-copy whitespace-pre-line">{content.introduction}</p>}
       {content.items.length > 0 && (
         <ul className="mt-5 grid gap-5">
@@ -30,7 +30,7 @@ export function FinerDetails({ content }: { content: Pick<WeddingContent, "lodgi
         </h2>
         <div className="mt-12 grid gap-4 md:grid-cols-2">
           <article className="dark-card">
-            <h3 className="dark-card-title">Getting there</h3>
+            <h3 className="info-label">Getting there</h3>
             <p className="dark-card-copy">Denver International Airport is the closest major airport. If you need help navigating the airport you can find more information at their website.</p>
             <p className="dark-card-copy">Consider arranging transportation in advance, whether it's a rental car, shuttle, or ride-sharing service, to ensure a smooth journey to Estes Park.</p>
             <p className="dark-card-copy">For those driving, the route to Estes Park offers beautiful scenery, so plan for extra travel time to enjoy the views and account for potential weather conditions.</p>

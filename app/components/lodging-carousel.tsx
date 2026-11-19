@@ -35,7 +35,7 @@ export function LodgingCarousel({ content }: { content: WeddingContent["lodging"
 
   return (
     <article className="dark-card lodging-carousel" aria-labelledby={`${id}-heading`} aria-roledescription={count > 1 ? "carousel" : undefined}>
-      <h3 id={`${id}-heading`} className="dark-card-title">Where to stay</h3>
+      <h3 id={`${id}-heading`} className="info-label">Where to stay</h3>
       {content.introduction && <p className="dark-card-copy whitespace-pre-line">{content.introduction}</p>}
       {count > 0 && (
         <div
