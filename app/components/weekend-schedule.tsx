@@ -1,4 +1,5 @@
 import { ScheduleTabs } from "./schedule-tabs";
+import { LodgingCarousel } from "./lodging-carousel";
 import { connection } from "next/server";
 import { readContent } from "../../lib/content-store";
 import { defaultContent } from "../../lib/default-content";
@@ -40,8 +41,14 @@ export async function WeekendSchedule() {
           <ScheduleTabs scheduleDays={content.schedule} />
         </div>
         <div className="grid gap-4 md:grid-cols-2">
-          <article className="dark-card"><h3 className="dark-card-title">Getting there</h3><p className="dark-card-copy">Denver International Airport is the closest major airport.</p></article>
-          <Recommendations title="Where to stay" content={content.lodging} />
+          <article className="dark-card">
+            <h3 className="dark-card-title">Getting there</h3>
+            <p className="dark-card-copy">Denver International Airport is the closest major airport. If you need help navigating the airport you can find more information at their website.</p>
+            <p className="dark-card-copy">Consider arranging transportation in advance, whether it's a rental car, shuttle, or ride-sharing service, to ensure a smooth journey to Estes Park.</p>
+            <p className="dark-card-copy">For those driving, the route to Estes Park offers beautiful scenery, so plan for extra travel time to enjoy the views and account for potential weather conditions.</p>
+            <a className="mt-3 inline-block font-semibold text-accent underline underline-offset-4" href="https://www.flydenver.com/" target="_blank" rel="noopener noreferrer">Visit website<span className="sr-only"> Denver International Airport website</span></a>
+          </article>
+          <LodgingCarousel content={content.lodging} />
           <Recommendations title="Things to do" content={content.thingsToDo} wide />
         </div>
       </div>

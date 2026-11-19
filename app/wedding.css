@@ -245,6 +245,72 @@
     margin: 0.8rem 0 0;
   }
 
+  .lodging-carousel {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .lodging-track {
+    border-top: 1px solid rgba(18, 53, 36, 0.15);
+    display: flex;
+    margin-top: 1.25rem;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+  }
+
+  .lodging-track::-webkit-scrollbar { display: none; }
+
+  .lodging-slide {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    min-width: 0;
+    padding: 1rem 0.25rem 0.25rem;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
+  .lodging-controls {
+    align-items: center;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: space-between;
+    margin-top: 1.25rem;
+  }
+
+  .lodging-control {
+    border: 1px solid rgba(18, 53, 36, 0.25);
+    border-radius: 999px;
+    color: var(--primary);
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 700;
+    min-height: 2.75rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .lodging-control:hover:not(:disabled) {
+    background: rgba(18, 53, 36, 0.08);
+  }
+
+  .lodging-control:disabled {
+    cursor: default;
+    opacity: 0.4;
+  }
+
+  .lodging-control:focus-visible,
+  .lodging-track:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+
+  .lodging-position {
+    color: rgba(18, 53, 36, 0.7);
+    font-size: 0.875rem;
+    white-space: nowrap;
+  }
+
   @media (max-width: 639px) {
     .hero-photo { object-position: 58% center; }
     .timeline-item { grid-template-columns: 1fr; }
