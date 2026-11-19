@@ -33,6 +33,7 @@ export function WeddingHero() {
       <nav aria-label="Wedding" className="relative z-10 mx-auto flex max-w-6xl flex-wrap gap-8 px-6 py-5 text-sm uppercase tracking-widest">
         <a className="nav-link" href="#details">Details</a>
         <a className="nav-link" href="#schedule">Schedule</a>
+        <a className="nav-link" href="#finer-details">Finer details</a>
         <a className="nav-link" href="#rsvp">RSVP</a>
       </nav>
     </header>

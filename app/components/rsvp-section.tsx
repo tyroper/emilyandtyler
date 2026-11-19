@@ -1,6 +1,6 @@
 export function RsvpSection() {
   return (
-    <section className="section bg-cream" id="rsvp" aria-labelledby="rsvp-heading">
+    <section className="section bg-secondary/25" id="rsvp" aria-labelledby="rsvp-heading">
       <div className="mx-auto max-w-4xl px-6 text-center">
         <div className="eyebrow">RSVP</div>
         <h2 id="rsvp-heading" className="mt-5 font-sans text-4xl leading-tight text-accent sm:text-5xl">
